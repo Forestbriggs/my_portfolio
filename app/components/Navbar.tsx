@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../../public/Logo.png';
@@ -20,9 +20,9 @@ const Nav = () => {
         }
     }
 
-    var showMenu = () => {
-        var bar = document.getElementsByClassName("bar");
-        var ham = document.getElementsByClassName("NavbarLinks");
+    const showMenu = () => {
+        const bar = document.getElementsByClassName("bar");
+        const ham = document.getElementsByClassName("NavbarLinks");
         bar[0].classList.toggle("barOne");
         bar[1].classList.toggle("barTwo");
         bar[2].classList.toggle("barThree");
@@ -30,9 +30,9 @@ const Nav = () => {
         ham[0].classList.toggle("showNavbar");
     }
 
-    var hideMenu = () => {
-        var bar = document.getElementsByClassName("bar");
-        var ham = document.getElementsByClassName("NavbarLinks");
+    const hideMenu = () => {
+        const bar = document.getElementsByClassName("bar");
+        const ham = document.getElementsByClassName("NavbarLinks");
         bar[0].classList.remove("barOne");
         bar[1].classList.remove("barTwo");
         bar[2].classList.remove("barThree");

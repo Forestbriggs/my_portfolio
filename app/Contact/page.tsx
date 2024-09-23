@@ -31,7 +31,7 @@ const Resume = () => {
         };
 
         emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, process.env.NEXT_PUBLIC_EMAILJS_AUTOREPLY_TEMPLATE_ID!, autoReplyData, process.env.NEXT_PUBLIC_EMAILJS_USER_ID)
-            .then((result) => {
+            .then(() => {
                 console.log("Auto-reply sent.");
             }, (error) => {
                 console.log("Failed to send auto-reply:", error.text);
