@@ -1,95 +1,54 @@
+'use client'
 import Image from "next/image";
-import styles from "./page.module.css";
+import Lottie from "lottie-react";
+import SpaceBoy from "../LottieFiles/SpaceBoy.json";
+import Typed from "./components/Typed";
+import Tilt from 'react-parallax-tilt';
+import HomePic from '../public/HomePic.png';
+import { CiCoffeeCup } from "react-icons/ci";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+const Home = () => {
+    return (
+        <div >
+            <div className='HomePage'>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+                <div className='HomeText'>
+                    <h1>Hi There!</h1>
+                    <h1>I&apos;M <b>FOREST BRIGGS</b></h1>
+                    <Typed />
+                </div>
+
+                <Lottie
+                    className="illustration"
+                    animationData={SpaceBoy}
+                    loop={true}
+                />
+
+            </div>
+
+            <div className='AboutPage'>
+                <div className='AboutText'>
+                    <h1 className='AboutTextHeading'>Brief <b>introduction</b></h1>
+                    <p>
+                        I&apos;m a software engineer deeply passionate about crafting intuitive and groundbreaking web applications and apps.<br /><br />
+
+                        From a young age, I&apos;ve been captivated by the inner workings of computers, and that fascination has only grown stronger over time.
+                        Today, it fuels my drive to tackle and solve complex problems, which I find immensely satisfying and rewarding.<br /><br />
+
+                        I am fluent in <b>TypeScript</b> and <b>Python</b> and am currently working on a few
+                        projects utilizing <b>React</b> and <b>Flask</b>.<br />
+
+                        I plan to learn <b>GO</b> and <b>React Native</b> in the near future. <br /><br />
+
+                        Also, I love <b>coffee</b> <CiCoffeeCup style={{ scale: "1.5", rotate: "15deg" }} />
+                    </p>
+                </div>
+                <Tilt>
+                    <Image className='Avatar-Container' src={HomePic} alt="Forest Briggs" priority />
+                </Tilt>
+            </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    )
 }
+
+export default Home
