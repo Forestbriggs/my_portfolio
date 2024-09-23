@@ -1,5 +1,5 @@
 'use client'
-// import type { Metadata } from "next";
+import Head from "next/head";
 import Nav from './components/Navbar';
 import Lottie from 'lottie-react';
 import nightsky from "../LottieFiles/night-sky.json";
@@ -7,12 +7,6 @@ import Footer from './components/Footer';
 import "./index.css";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/next';
-
-// export const metadata: Metadata = {
-//     title: "Forest Briggs",
-//     description: "My Portfolio",
-//     icons: './Favicon.png'
-// };
 
 export default function RootLayout({
     children,
@@ -24,6 +18,10 @@ export default function RootLayout({
 
     return (
         <html lang="en">
+            <Head>
+                <link rel="icon" href="/Favicon.png" />
+                <title>Forest Briggs</title>
+            </Head>
             < body >
                 <div>
                     <div>
