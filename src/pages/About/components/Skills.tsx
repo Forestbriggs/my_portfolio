@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaReact, FaPython, FaGitAlt, FaGithub, FaNpm, FaFigma } from "react-icons/fa";
 import { DiNodejs, DiJavascript1 } from "react-icons/di";
 import { SiDocker, SiExpress, SiFlask, SiPostgresql, SiPostman, SiRedux, SiSequelize, SiTailwindcss } from "react-icons/si";
