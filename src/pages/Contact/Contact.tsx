@@ -92,6 +92,7 @@ const Resume = () => {
                             required
                         ></textarea>
                     </div>
+                    {/* TODO: make button show loading state */}
                     <button type="submit">Submit</button>
                     {status && <p className="status-message">{status}</p>}
                 </form>
