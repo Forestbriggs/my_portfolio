@@ -4,6 +4,7 @@ import Logo from '../assets/Logo.png';
 import { AiOutlineHome } from "react-icons/ai";
 import { BsPerson, BsCodeSlash } from "react-icons/bs";
 import { BiMessage } from 'react-icons/bi';
+import { NavLink } from 'react-router-dom';
 
 
 const Nav = () => {
@@ -55,10 +56,10 @@ const Nav = () => {
             </div>
 
             <ul className='NavbarLinks'>
-                <li onClick={hideMenu}><a href="/"><AiOutlineHome /> Home</a></li>
-                <li onClick={hideMenu}><a href="/about"><BsPerson /> About</a></li>
-                <li onClick={hideMenu}><a href="/projects"><BsCodeSlash /> Projects</a></li>
-                <li onClick={hideMenu}><a href="/contact"><BiMessage /> Contact Me</a></li>
+                <li onClick={hideMenu}><NavLink to="/"><AiOutlineHome /> Home</NavLink></li>
+                <li onClick={hideMenu}><NavLink to="/about"><BsPerson /> About</NavLink></li>
+                <li onClick={hideMenu}><NavLink to="/projects"><BsCodeSlash /> Projects</NavLink></li>
+                <li onClick={hideMenu}><NavLink to="/contact"><BiMessage /> Contact Me</NavLink></li>
             </ul>
 
         </nav>
