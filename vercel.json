@@ -1,16 +1,16 @@
 {
-    "rewrites": [
+    "routes": [
         {
-            "source": "/[^.]+",
-            "destination": "/",
+            "src": "/[^.]+",
+            "dest": "/",
             "status": 200
-        }
-    ],
-    "redirects": [
+        },
         {
-            "source": "/defaultsite",
-            "destination": "/",
-            "permanent": false
+            "src": "/defaultsite",
+            "headers": {
+                "Location": "/"
+            },
+            "status": 307
         }
     ]
 }
