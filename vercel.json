@@ -5,5 +5,12 @@
             "dest": "/",
             "status": 200
         }
+    ],
+    "redirects": [
+        {
+            "source": "/defaultsite",
+            "destination": "/",
+            "permanent": false
+        }
     ]
 }
