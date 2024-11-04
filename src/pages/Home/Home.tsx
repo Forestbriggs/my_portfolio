@@ -42,7 +42,7 @@ const Home = () => {
                     </p>
                 </div>
                 <Tilt>
-                    <img className='Avatar-Container' src={HomePic} alt="Forest Briggs" />
+                    <img className='Avatar-Container' src={HomePic} alt="A Picture Of Me Playing Guitar" />
                 </Tilt>
             </div>
         </div>
