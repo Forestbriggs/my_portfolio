@@ -4,13 +4,6 @@
             "src": "/[^.]+",
             "dest": "/",
             "status": 200
-        },
-        {
-            "src": "/defaultsite",
-            "headers": {
-                "Location": "/"
-            },
-            "status": 307
         }
     ]
 }

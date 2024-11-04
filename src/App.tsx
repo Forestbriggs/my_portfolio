@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Layout from './components/Layout'
 import About from './pages/About/About'
@@ -25,6 +25,10 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />
+            },
+            {
+                path: '*',
+                element: <Navigate to="/" replace />
             }
         ]
     }
