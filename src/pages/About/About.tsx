@@ -1,10 +1,14 @@
 import Skills from './components/Skills';
 import Tilt from 'react-parallax-tilt';
 import Me from '../../assets/Me.png';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
     return (
         <>
+            <Helmet>
+                <link rel="canonical" href={window.location.href} />
+            </Helmet>
             <div className='AboutPage'>
                 <div className='AboutText'>
                     <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
