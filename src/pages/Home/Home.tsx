@@ -11,6 +11,7 @@ const Home = () => {
         <>
             <Helmet>
                 <link rel="canonical" href={'https://forestbriggsdev.vercel.app/'} />
+                <title>Forest Briggs Developer | My Digital Workspace</title>
             </Helmet>
             <div >
                 <div className='HomePage'>
