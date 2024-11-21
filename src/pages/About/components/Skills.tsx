@@ -4,7 +4,8 @@ import {
     SiChai, SiCsharp, SiCss3, SiCypress, SiExpress, SiFlask, SiGo, SiHtml5, SiJest,
     SiJinja, SiMocha, SiMongodb, SiMongoose, SiNeovim, SiNetlify, SiNextdotjs, SiPandas,
     SiPlaywright, SiPostgresql, SiPostman, SiPytest, SiRedux, SiRender, SiSequelize, SiSpring,
-    SiSqlalchemy, SiSqlite, SiTailwindcss, SiTypescript, SiUnity, SiVercel
+    SiSqlalchemy, SiSqlite, SiTailwindcss, SiTypescript, SiUnity, SiVercel,
+    SiVitest
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { VscVscode } from "react-icons/vsc";
@@ -52,6 +53,7 @@ const Skills = ({ skill }: { skill: string }) => {
         Unity: <SiUnity />,
 
         Jest: <SiJest />,
+        Vitest: <SiVitest />,
         Mocha: <SiMocha />,
         Chai: <SiChai />,
         Pytest: <SiPytest />,

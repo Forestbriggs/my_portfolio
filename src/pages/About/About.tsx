@@ -16,7 +16,7 @@ const backendFrameworksAndLibraries: string[] = [
 ];
 
 const testingAndQA: string[] = [
-    'Jest', 'Mocha', 'Chai', 'Pytest', 'Cypress', 'Playwright', 'JUnit'
+    'Jest', 'Vitest', 'Mocha', 'Chai', 'Pytest', 'Cypress', 'Playwright', 'JUnit'
 ];
 
 const databases: string[] = [
