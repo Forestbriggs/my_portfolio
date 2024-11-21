@@ -13,11 +13,20 @@ const About = () => {
                 <div className='AboutText'>
                     <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
                     <p>
-                        Hi, my name is <b>Forest Briggs</b> and I am from Eugene, Oregon.
-                        I&apos;m a <b>Full stack web developer</b> and recent graduate of <b>App Academy</b>. <br /><br />
-                        I love to create innovative projects with intuitive designs, you can check out some of my work in the projects section.<br /><br />
-                        I am <b>open</b> to new collaborations or work where I can contribute and grow. Feel free to connect with me, links are in the footer.<br />
-                        Apart from coding I love to go on <b>hikes</b> and <b>play guitar</b>, also I can enjoy a good board game!
+                        Hi, I&apos;m <b>Forest Briggs</b>, a <b>full-stack web
+                        developer</b> based in Oregon. <br /><br />
+
+                        I love bringing ideas to life with clean, functional
+                        designs that are enjoyable to use—check out some of my
+                        favorite projects in the portfolio section! <br /><br />
+
+                        I&apos;m <b>open</b> to new collaborations or roles
+                        where I can grow and make an impact. Let&apos;s
+                        connect—links are in the footer. <br /><br />
+
+                        Outside of coding, I&apos;m often out on a <b>hike</b>,
+                        experimenting with my <b>guitar</b>, or challenging
+                        friends to a good board game. ☕
                     </p>
                 </div>
 
