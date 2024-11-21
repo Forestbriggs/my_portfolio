@@ -18,7 +18,7 @@ const Home = () => {
 
                     <div className='HomeText'>
                         <h1>Hi There!</h1>
-                        <h1>I&apos;M <b>FOREST BRIGGS</b></h1>
+                        <h2>I&apos;M <b>FOREST BRIGGS</b></h2>
                         <Typed />
                     </div>
 
@@ -32,7 +32,7 @@ const Home = () => {
 
                 <div className='AboutPage'>
                     <div className='AboutText'>
-                        <h1 className='AboutTextHeading'>Brief <b>introduction</b></h1>
+                        <h3 className='AboutTextHeading'>Brief <b>introduction</b></h3>
                         <p>
                             I&apos;m a software engineer deeply passionate about crafting intuitive and groundbreaking web applications and apps.<br /><br />
 

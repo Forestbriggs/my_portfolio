@@ -229,7 +229,8 @@ b {
     align-items: center;
 }
 
-.HomeText h1 {
+.HomeText h1,
+.HomeText h2{
     font-weight: 600;
     font-size: 38px;
     letter-spacing: 0.7px;
@@ -532,7 +533,7 @@ footer {
     text-align: center;
 }
 
-footer h4 {
+footer p {
     margin: 0 25px;
     font-weight: 500;
 }
