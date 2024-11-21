@@ -92,7 +92,7 @@ const About = () => {
 
             {skillSections.map(({ heading, skillsList }: { heading: string, skillsList: string[] }) => {
                 return (
-                    < SkillsSection heading={heading} skillsList={skillsList} />
+                    < SkillsSection key={heading} heading={heading} skillsList={skillsList} />
                 )
             })}
         </>

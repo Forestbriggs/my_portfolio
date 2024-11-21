@@ -7,7 +7,7 @@ export default function SkillsSection({ heading, skillsList }: { heading: string
             <div className="skills">
                 {skillsList.map((skill) => {
                     return (
-                        <Skills skill={skill} />
+                        <Skills key={skill} skill={skill} />
                     )
                 })}
             </div>
