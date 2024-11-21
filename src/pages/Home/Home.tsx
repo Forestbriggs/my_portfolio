@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <link rel="canonical" href={window.location.href} />
+                <link rel="canonical" href={'https://forestbriggsdev.vercel.app/'} />
             </Helmet>
             <div >
                 <div className='HomePage'>
