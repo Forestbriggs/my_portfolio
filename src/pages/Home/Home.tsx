@@ -32,17 +32,23 @@ const Home = () => {
                     <div className='AboutText'>
                         <h3 className='AboutTextHeading'>Brief <b>introduction</b></h3>
                         <p>
-                            I&apos;m a software engineer deeply passionate about crafting intuitive and groundbreaking web applications and apps.<br /><br />
+                            I&apos;m a software engineer deeply passionate about crafting intuitive
+                            and groundbreaking web applications and apps.<br /><br />
 
-                            From a young age, I&apos;ve been captivated by the inner workings of computers, and that fascination has only grown stronger over time.
-                            Today, it fuels my drive to tackle and solve complex problems, which I find immensely satisfying and rewarding.<br /><br />
+                            From a young age, I&apos;ve been captivated by the inner workings of
+                            computers, and that fascination has only grown stronger over time.
+                            Today, it fuels my drive to tackle and solve complex problems, which I
+                            find immensely satisfying and rewarding.<br /><br />
 
-                            I am fluent in <b>TypeScript</b> and <b>Python</b> and am currently working on a few
-                            projects utilizing <b>React</b> and <b>Flask</b>.<br />
+                            I&apos;ve worked with a wide range of languages and frameworks,
+                            but my projects tend to revolve around <b>TypeScript</b>, <b>Python</b>,
+                            and <b>Go</b>. No matter the tool or technology,
+                            I love diving into new challenges and figuring out how all the pieces
+                            fit together. <br /><br />
 
-                            I plan to learn <b>GO</b> and <b>React Native</b> in the near future. <br /><br />
-
-                            Also, I love <b>coffee</b> <CiCoffeeCup style={{ scale: "1.5", rotate: "15deg" }} />
+                            Oh, and I love <b>coffee</b>
+                            <CiCoffeeCup style={{ scale: "1.5", rotate: "15deg" }} />
+                            —it&apos;s basically fuel for all my ideas. ☕
                         </p>
                     </div>
                     <Tilt>
