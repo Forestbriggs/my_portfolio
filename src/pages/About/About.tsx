@@ -1,7 +1,59 @@
-import Skills from './components/Skills';
 import Tilt from 'react-parallax-tilt';
 import Me from '../../assets/Me.png';
 import { Helmet } from 'react-helmet-async';
+import SkillsSection from './components/SkillsSection';
+
+const languages: string[] = [
+    'TypeScript', 'JavaScript', 'Python', 'Go', 'Java', 'C#', 'SQL', 'HTML', 'CSS'
+];
+
+const frontendFrameworksAndLibraries: string[] = [
+    'React', 'Redux', 'Next.js', 'React Native', 'Tailwind', 'Jinja'
+];
+
+const backendFrameworksAndLibraries: string[] = [
+    'Node', 'Flask', 'Express', 'SQLAlchemy', 'Sequelize', 'Mongoose', 'Spring'
+];
+
+const testingAndQA: string[] = [
+    'Jest', 'Mocha', 'Chai', 'Pytest', 'Cypress', 'Playwright', 'JUnit'
+];
+
+const databases: string[] = [
+    'PostgreSQL', 'MongoDB', 'SQLite3'
+];
+
+const toolsAndPlatforms: string[] = [
+    'Docker', 'Git', 'GitHub', 'RESTful APIs', 'VS Code', 'Neovim', 'Render',
+    'Vercel', 'Netlify', 'Postman', 'Figma', 'WordPress', 'Unity'
+];
+
+const skillSections: { heading: string, skillsList: string[] }[] = [
+    {
+        heading: 'Programming Languages',
+        skillsList: languages
+    },
+    {
+        heading: 'Frontend Frameworks & Libraries',
+        skillsList: frontendFrameworksAndLibraries
+    },
+    {
+        heading: 'Backend Frameworks & Libraries',
+        skillsList: backendFrameworksAndLibraries
+    },
+    {
+        heading: 'Testing & QA',
+        skillsList: testingAndQA
+    },
+    {
+        heading: 'Databases',
+        skillsList: databases
+    },
+    {
+        heading: 'Tools & Platforms',
+        skillsList: toolsAndPlatforms
+    }
+]
 
 const About = () => {
     return (
@@ -14,7 +66,7 @@ const About = () => {
                     <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
                     <p>
                         Hi, I&apos;m <b>Forest Briggs</b>, a <b>full-stack web
-                        developer</b> based in Oregon. <br /><br />
+                            developer</b> based in Oregon. <br /><br />
 
                         I love bringing ideas to life with clean, functional
                         designs that are enjoyable to use—check out some of my
@@ -38,28 +90,11 @@ const About = () => {
 
             </div>
 
-            <h2 className='SkillsHeading'>Professional Skills</h2>
-            <div className='skills'>
-
-                <Skills skill='React' />
-                <Skills skill='Redux' />
-                <Skills skill='Flask' />
-                <Skills skill='Tailwind' />
-                <Skills skill='Node' />
-                <Skills skill='Express' />
-                <Skills skill='Sequelize' />
-                <Skills skill='PostgreSQL' />
-                <Skills skill='Git' />
-                <Skills skill='Github' />
-                <Skills skill='Docker' />
-                <Skills skill='Javascript' />
-                <Skills skill='Python' />
-                <Skills skill='Postman' />
-                <Skills skill='Figma' />
-                <Skills skill='Npm' />
-
-            </div>
-
+            {skillSections.map(({ heading, skillsList }: { heading: string, skillsList: string[] }) => {
+                return (
+                    < SkillsSection heading={heading} skillsList={skillsList} />
+                )
+            })}
         </>
     )
 }
