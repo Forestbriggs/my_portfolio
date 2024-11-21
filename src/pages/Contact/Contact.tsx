@@ -42,7 +42,7 @@ const Resume = () => {
     return (
         <>
             <Helmet>
-                <link rel="canonical" href={window.location.href} />
+                <link rel="canonical" href={'https://forestbriggsdev.vercel.app/contact'} />
             </Helmet>
             <div className="contact-page">
                 <h1>Contact <b>Me</b></h1>

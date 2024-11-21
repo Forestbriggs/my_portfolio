@@ -7,7 +7,7 @@ const About = () => {
     return (
         <>
             <Helmet>
-                <link rel="canonical" href={window.location.href} />
+                <link rel="canonical" href={'https://forestbriggsdev.vercel.app/about'} />
             </Helmet>
             <div className='AboutPage'>
                 <div className='AboutText'>

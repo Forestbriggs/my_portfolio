@@ -8,7 +8,7 @@ const Projects = () => {
     return (
         <>
             <Helmet>
-                <link rel="canonical" href={window.location.href} />
+                <link rel="canonical" href={'https://forestbriggsdev.vercel.app/projects'} />
             </Helmet>
             <div>
                 <h1 className='projectHeading'>My <b>Projects</b></h1>

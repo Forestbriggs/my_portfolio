@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt';
 import HomePic from '../../assets/HomePic.png';
 import { Helmet } from "react-helmet-async";
 import { CiCoffeeCup } from "react-icons/ci";
-
+// TODO change title tags in other pages
 const Home = () => {
     return (
         <>
