@@ -5,13 +5,11 @@ import Tilt from 'react-parallax-tilt';
 import HomePic from '../../assets/HomePic.png';
 import { Helmet } from "react-helmet-async";
 import { CiCoffeeCup } from "react-icons/ci";
-// TODO change title tags in other pages
 const Home = () => {
     return (
         <>
             <Helmet>
                 <link rel="canonical" href={'https://forestbriggsdev.vercel.app/'} />
-                <title>Forest Briggs Developer | My Digital Workspace</title>
             </Helmet>
             <div >
                 <div className='HomePage'>
