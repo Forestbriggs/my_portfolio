@@ -3,10 +3,12 @@ import { useState } from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaPhone } from "react-icons/fa";
 import emailjs from 'emailjs-com';
 import { Helmet } from "react-helmet-async";
+import { VscLoading } from "react-icons/vsc";
 
 const Resume = () => {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-    const [status, setStatus] = useState("");
+    const [status, setStatus] = useState({ error: false, message: '' });
+    const [isSending, setIsSending] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -15,24 +17,26 @@ const Resume = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setIsSending(true);
         emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID!, import.meta.env.VITE_EMAILJS_TEMPLATE_ID!, formData, import.meta.env.VITE_EMAILJS_USER_ID)
             .then(() => {
-                setStatus("Message sent successfully!");
+                setIsSending(false);
+                setStatus({ error: false, message: `Message sent successfully! You should receive confirmation in your inbox shortly.` });
+                // Send auto-reply to the sender
+                const autoReplyData = {
+                    to_email: formData.email, // Send to sender's email
+                    name: formData.name, // Sender's name
+                };
+
+                emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID!, import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID!, autoReplyData, import.meta.env.VITE_EMAILJS_USER_ID)
+                    .then(() => {
+                        console.log("Auto-reply sent.");
+                    }, (error: any) => {
+                        console.log("Failed to send auto-reply:", error.text);
+                    });
             }, () => {
-                setStatus("Failed to send the message.");
-            });
-
-        // Send auto-reply to the sender
-        const autoReplyData = {
-            to_email: formData.email, // Send to sender's email
-            name: formData.name, // Sender's name
-        };
-
-        emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID!, import.meta.env.VITE_EMAILJS_AUTOREPLY_TEMPLATE_ID!, autoReplyData, import.meta.env.VITE_EMAILJS_USER_ID)
-            .then(() => {
-                console.log("Auto-reply sent.");
-            }, (error: any) => {
-                console.log("Failed to send auto-reply:", error.text);
+                setIsSending(false);
+                setStatus({ error: true, message: "Looks like something went wrong. Feel free to reach out directly via my provided contact info!" });
             });
 
         // Clear form
@@ -98,14 +102,24 @@ const Resume = () => {
                             ></textarea>
                         </div>
                         {/* TODO: make button show loading state */}
-                        <button type="submit">Submit</button>
-                        {status && <p className="status-message">{status}</p>}
+                        <button type="submit">
+                            {isSending ?
+                                <span style={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                    gap: 10
+                                }}>
+                                    < VscLoading className="sendingLoader" /> Sending</span>
+                                : 'Submit'}
+                        </button>
+                        {status.message && <p className={`status-message ${status.error ? 'status-error' : ''}`}>{status.message}</p>}
                     </form>
                 </div>
                 <a className="downloadCV" href="/ForestBriggsResume.pdf" target='_blank' rel='noreferrer noopener' download="Forest_Briggs_Resume.pdf">
                     <h3><BsDownload />&nbsp; Download CV</h3>
                 </a>
-            </div>
+            </div >
         </>
     )
 }

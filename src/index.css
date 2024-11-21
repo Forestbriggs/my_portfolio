@@ -703,6 +703,10 @@ button:hover {
     color: green;
 }
 
+.status-error {
+    color: red;
+}
+
 /* Download CV Button */
 .downloadCV {
     display: flex;
@@ -734,4 +738,17 @@ button:hover {
     align-items: center;
     font-size: 1rem;
     margin: 0;
+}
+
+.sendingLoader {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0def);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
