@@ -1,11 +1,13 @@
-import { FaReact, FaPython, FaGitAlt, FaGithub, FaNpm, FaFigma, FaDocker, FaJava } from "react-icons/fa";
+import { FaReact, FaPython, FaGitAlt, FaGithub, FaFigma, FaDocker, FaJava } from "react-icons/fa";
 import { DiNodejs, DiJavascript1, DiJava } from "react-icons/di";
-import { SiChai, SiCsharp, SiCss3, SiCypress, SiDocker, SiExpress, SiFlask, SiGo, SiGraphql, SiHtml5, SiJest, SiJinja, SiMocha, SiMongodb, SiMongoose, SiMongoosedotws, SiNeovim, SiNetlify, SiNextdotjs, SiPandas, SiPlaywright, SiPostgresql, SiPostman, SiPytest, SiRedux, SiRender, SiSequelize, SiSpring, SiSqlalchemy, SiSqlite, SiTailwindcss, SiTypescript, SiUnity, SiVercel } from "react-icons/si";
-import { BiLogoTypescript } from "react-icons/bi";
+import {
+    SiChai, SiCsharp, SiCss3, SiCypress, SiExpress, SiFlask, SiGo, SiHtml5, SiJest,
+    SiJinja, SiMocha, SiMongodb, SiMongoose, SiNeovim, SiNetlify, SiNextdotjs, SiPandas,
+    SiPlaywright, SiPostgresql, SiPostman, SiPytest, SiRedux, SiRender, SiSequelize, SiSpring,
+    SiSqlalchemy, SiSqlite, SiTailwindcss, SiTypescript, SiUnity, SiVercel
+} from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
-import { VscCodeOss, VscVscode } from "react-icons/vsc";
-import { CgVercel } from "react-icons/cg";
-import { RxVercelLogo } from "react-icons/rx";
+import { VscVscode } from "react-icons/vsc";
 import { BsWordpress } from "react-icons/bs";
 
 const Skills = ({ skill }: { skill: string }) => {
