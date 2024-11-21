@@ -466,6 +466,7 @@ b {
 
 .projectBox {
     width: 350px;
+    background-color: #454545;
     border: 3px solid #431f47;
     border-radius: 5px;
     text-align: center;
@@ -485,8 +486,11 @@ b {
 
 .projectPhoto {
     display: block;
+    border-radius: .3rem;
     height: auto;
     width: 100%;
+    aspect-ratio: 2900/1732;
+    object-fit:cover;
     margin: 20px 0px;
 }
 

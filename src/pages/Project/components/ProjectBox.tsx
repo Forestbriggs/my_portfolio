@@ -6,22 +6,29 @@ const ProjectBox = ({ projectPhoto, projectName }: { projectPhoto: string, proje
     const nameKey = projectName.split('-').join('').split(' ').join('');
 
     const desc = {
-        ApplySageDesc: "A custom job application tracker built with React/Redux, Flask/SQLAlchemy, PostgreSQL, and Tailwind CSS. Designed to streamline my job search and crafted for real-world use—if you're a recruiter, there's a good chance I'm tracking my application to your company right here—no pressure!",
+        InvAuditDesc: 'A React and TypeScript-based inventory auditing tool featuring barcode scanner input, real-time discrepancy detection, and scalability for multi-tenant SaaS deployment.',
+        InvAuditGithub: 'https://github.com/Forestbriggs/invaudit',
+
+        ApplySageDesc: "A full-stack application for tracking job applications, featuring React and Flask, with dynamic analytics dashboards powered by Pandas and Charts.js.",
         ApplySageGithub: "https://github.com/Forestbriggs/apply_sage",
         ApplySageWebsite: "https://applysage.onrender.com/",
 
-        QUnderstackDesc: "A Stack Overflow clone created by a three-developer team to practice Agile development and Docker containerization. Built with React/Redux, Flask/SQLAlchemy, and PostgreSQL, it offers a comprehensive Q&A platform for developers and is hosted on Render using Docker.",
+        SolarFarmDesc: "A Java console application for managing solar panel installations, featuring object-oriented principles, file-based storage, and dependency injection with Spring.",
+        SolarFarmGithub: "https://github.com/Forestbriggs/solarfarm",
+
+        QUnderstackDesc: "A Stack Overflow-inspired platform built with React, Redux, and SQLAlchemy, featuring user authentication, real-time updates, and Dockerized deployment.",
         QUnderstackGithub: "https://github.com/Sohna-AI/q-understack",
         QUnderstackWebsite: "https://q-understack.onrender.com/",
 
-        GrandLineGatheringsDesc: "A MeetUp clone developed with React/Redux, Express/Sequelize, and PostgreSQL. This platform facilitates event organization and community engagement, demonstrating a strong grasp of full-stack development and database management.",
+        GrandLineGatheringsDesc: "A MeetUp clone built with React, Redux, Express, and PostgreSQL, enabling event organization and community engagement with full-stack functionality.",
         GrandLineGatheringsGithub: "https://github.com/Forestbriggs/Grand-line-gatherings",
         GrandLineGatheringsWebsite: "https://grand-line-gatherings.onrender.com/",
+
     }
 
-    let show = '';
-    if (desc[nameKey + 'Github' as keyof typeof desc] === "") {
-        show = "none";
+    let showDemoLink = true;
+    if (desc[nameKey + 'Website' as keyof typeof desc] === undefined) {
+        showDemoLink = false;
     }
 
     return (
@@ -34,15 +41,15 @@ const ProjectBox = ({ projectPhoto, projectName }: { projectPhoto: string, proje
                 {desc[nameKey + 'Desc' as keyof typeof desc]}
                 <br />
 
-                <a style={{ display: show }} href={desc[nameKey + 'Github' as keyof typeof desc]} target='_blank' rel='noreferrer noopener'>
+                <a href={desc[nameKey + 'Github' as keyof typeof desc]} target='_blank' rel='noreferrer noopener'>
                     <button className='projectbtn'><FaGithub /> Github</button>
                 </a>
 
-                <a href={desc[nameKey + 'Website' as keyof typeof desc]} target='_blank' rel='noreferrer noopener'>
+                <a style={{ display: !showDemoLink ? 'none' : '' }} href={desc[nameKey + 'Website' as keyof typeof desc]} target='_blank' rel='noreferrer noopener'>
                     <button className='projectbtn'><CgFileDocument /> Demo</button>
                 </a>
             </div>
-        </div>
+        </div >
     )
 }
 
