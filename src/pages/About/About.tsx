@@ -12,7 +12,7 @@ const frontendFrameworksAndLibraries: string[] = [
 ];
 
 const backendFrameworksAndLibraries: string[] = [
-    'Node', 'Flask', 'Express', 'SQLAlchemy', 'Sequelize', 'Mongoose', 'Spring'
+    'Node', 'Flask', 'Express', 'SQLAlchemy', 'Sequelize', 'Mongoose', 'Spring', 'Pandas'
 ];
 
 const testingAndQA: string[] = [
@@ -24,7 +24,7 @@ const databases: string[] = [
 ];
 
 const toolsAndPlatforms: string[] = [
-    'Docker', 'Git', 'GitHub', 'RESTful APIs', 'VS Code', 'Neovim', 'Render',
+    'Docker', 'Git', 'GitHub', 'VS Code', 'Neovim', 'Render',
     'Vercel', 'Netlify', 'Postman', 'Figma', 'WordPress', 'Unity'
 ];
 
