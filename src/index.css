@@ -150,7 +150,7 @@ b {
     display: none;
 }
 
-@media(max-width:800px) {
+@media(max-width:820px) {
     .Navbar {
         width: 100%;
     }
@@ -353,13 +353,25 @@ b {
     margin: 0 auto;
 }
 
-@media(max-width:600px) {
+@media(max-width:450px) {
+    .Me {
+        height: 200px;
+    }
+}
+
+@media(min-width:410px) and (max-width:429px) {
+    .Me {
+        height: 230px;
+    }
+}
+
+@media(min-width:430px) and (max-width:600px) {
     .Me {
         height: 240px;
     }
 }
 
-@media(min-width:601px) and (max-width:900px) {
+@media(min-width:601px) and (max-width:1024px) {
     .Me {
         height: 400px;
         margin: 0 auto;
@@ -367,7 +379,7 @@ b {
     }
 }
 
-@media(max-width:900px) {
+@media(max-width:1024px) {
     .AboutPage {
         display: block;
         text-align: center;

@@ -65,20 +65,22 @@ const About = () => {
                 <div className='AboutText'>
                     <h1 className='AboutTextHeading' >Get to <b>know</b> me!</h1>
                     <p>
-                        Hi, I&apos;m <b>Forest Briggs</b>, a <b>full-stack web
-                            developer</b> based in Oregon. <br /><br />
+                        Hi, I&apos;m <b>Forest Briggs</b>, a <b>full-stack software developer</b> based in Oregon. <br /><br />
 
-                        I love bringing ideas to life with clean, functional
-                        designs that are enjoyable to use—check out some of my
-                        favorite projects in the portfolio section! <br /><br />
+                        My love for technology started early—I was that kid
+                        always poking around the family computer, dreaming of
+                        understanding how things worked. In school, a teacher told
+                        me I wasn&apos;t good enough for programming, a moment that
+                        crushed my confidence and pushed me away from tech
+                        for years. <br /><br />
 
-                        I&apos;m <b>open</b> to new collaborations or roles
-                        where I can grow and make an impact. Let&apos;s
-                        connect—links are in the footer. <br /><br />
-
-                        Outside of coding, I&apos;m often out on a <b>hike</b>,
-                        experimenting with my <b>guitar</b>, or challenging
-                        friends to a good board game. ☕
+                        After feeling stuck in a career that didn&apos;t inspire
+                        me, I decided to rewrite my own story. I started
+                        learning to code, and suddenly, it was like rediscovering
+                        a part of myself I&apos;d forgotten. Now, as a full-stack software engineer,
+                        I'm not just building websites and applications—I'm
+                        proving that passion, persistence, and continuous
+                        learning can turn dreams into reality. <br /><br />
                     </p>
                 </div>
 
