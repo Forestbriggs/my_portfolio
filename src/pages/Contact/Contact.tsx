@@ -68,7 +68,7 @@ const Resume = () => {
 
 
                     {/* Contact Form Section */}
-                    <form onSubmit={handleSubmit} className="contact-form">
+                    <form onSubmit={handleSubmit} className="contact-form plausible-event-name=Contact+Form">
                         <div className="form-group">
                             <label>Name</label>
                             <input
